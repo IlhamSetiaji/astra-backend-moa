@@ -3,7 +3,7 @@
 
 [![Laravel 10](https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg)](https://laravel.com/docs/10.x/)
 
-Astra Backend Code adalah source code backend untuk proyek management event untuk Astra Daihatsu Motor yang dikerjakan oleh tim Magang Online Academy Bacth 8
+Astra Backend Code adalah source code backend untuk proyek management event untuk Astra Daihatsu Motor yang dikerjakan oleh tim Magang Online Academy Bathh 8
 
 ## Features
 
@@ -24,7 +24,7 @@ Astra Backend Code uses a number of open source projects to work properly:
 
 ## Installation
 
-Dillinger requires [PHP 8.1+](https://www.php.net/downloads.php) to run.
+Astra Backend Code requires [PHP 8.1+](https://www.php.net/downloads.php) to run.
 
 To start Astra Backend Code, please follow this instruction:
 
