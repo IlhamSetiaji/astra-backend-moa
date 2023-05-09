@@ -15,16 +15,19 @@ class BrandSeeder extends Seeder
         collect([
             [
                 'name' => 'Hyundai',
+                'type' => 'cars',
                 'result' => 100,
                 'description' => 'Hyundai is a South Korean multinational automotive manufacturer headquartered in Seoul.',
             ],
             [
                 'name' => 'Toyota',
+                'type' => 'cars',
                 'result' => 100,
                 'description' => 'Toyota is a Japanese multinational automotive manufacturer headquartered in Toyota, Aichi, Japan.',
             ],
             [
                 'name' => 'Honda',
+                'type' => 'cars',
                 'result' => 100,
                 'description' => 'Honda is a Japanese public multinational conglomerate corporation primarily known as a manufacturer of automobiles, motorcycles, and power equipment.',
             ]

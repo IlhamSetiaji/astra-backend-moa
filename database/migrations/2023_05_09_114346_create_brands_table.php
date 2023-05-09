@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('brands', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->enum('type',['cars','motorcycle'])->default('cars');
             $table->integer('result');
             $table->string('description');
             $table->enum('payment_method', ['cash', 'credit_card', 'debit_card', 'paypal', 'stripe','check']);

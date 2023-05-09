@@ -17,9 +17,12 @@ return new class extends Migration
             $table->enum('venue',['online','offline'])->default('offline');
             $table->string('city');
             $table->string('games');
+            $table->boolean('nv')->default(false);
             $table->integer('visitors');
             $table->string('spk');
             $table->string('live_data')->nullable();
+            $table->timestamp('start_date')->default(\Carbon\Carbon::now());
+            $table->timestamp('end_date')->default(\Carbon\Carbon::now()->addDays(3));
             $table->timestamps();
         });
     }
