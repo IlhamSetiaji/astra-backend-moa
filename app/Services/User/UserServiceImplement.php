@@ -25,6 +25,24 @@ class UserServiceImplement extends Service implements UserService
 
     // Define your custom methods :)
 
+    public function register(array $payload): object
+    {
+        try {
+            $payload['password'] = Hash::make($payload['password']);
+            $user = $this->mainRepository->create($payload);
+            $user->assignRole('user');
+            $token = $user->createToken('auth_token')->plainTextToken;
+            $response = [
+                'token' => $token,
+                'token_type' => 'Bearer',
+                'user' => $user->load('roles'),
+            ];
+            return ResponseFormatter::success($response, 'User Registered');
+        } catch (Exception $err) {
+            return ResponseFormatter::error($err, 'Something went wrong', 500);
+        }
+    }
+
     public function login(array $payload): object
     {
         try {
