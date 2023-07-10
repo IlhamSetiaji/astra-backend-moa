@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\API\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\API\UserController;
+use App\Http\Controllers\API\EventController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +26,9 @@ Route::middleware('auth:sanctum')->group(function () {
         });
     });
 });
+Route::get('event',[EventController::class, 'event']);
+Route::get('/event/{id}', [EventController::class, 'getById']);
+Route::post('event', [EventController::class, 'create']);
+Route::put('/event/{id}', [EventController::class, 'update']);
+Route::delete('/event/{id}', [EventController::class, 'delete']);
+Route::get('/filter', [EventController::class, 'filter']);
